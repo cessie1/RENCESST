@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Offerings</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 12px;
+    }
+
+    .w3-sidebar {
+      width: 120px;
+      background-color: rgb(27, 24, 24);
+    }
+
+    #main {
+      margin-left: 120px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #main {
+        margin-left: 0;
+      }
+    }
+
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150%;
+    }
+
+    /* Smooth transitions */
+    .course {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .course.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Hover effect for course cards */
+    .card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background-color: #007bff; /* Blue background color */
+      color: white; /* White text color when hovered */
+    }
+
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .w3-bar button {
+      font-weight: bolder;
+    }
+  </style>
+</head>
+
+<body style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(background.jpg); background-size: cover; background-attachment: fixed;">
+  <div class="opacity-75 w3-display-topleft" style="margin-right: 95%; width:120px; height: 50px; background-color: black;">
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <a href="../course/Course.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-search w3-large"></i>
+        <p>COURSE</p>
+      </a>
+      <a href="../contact/Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+      </a>
+      <a href="../AboutUs/about.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ABOUT</p>
+      </a>
+    </nav>
+  </div>
+  <br>
+
+  <div class="w3-bar opacity-75 w3-display-topmiddle " style="height: 8%; width:700px;" id="container">
+    <button class="w3-bar-item w3-button w3-hover-black" onclick="openCourse('BSBA')">BSBA</button>
+    <button class="w3-bar-item w3-button w3-hover-black" onclick="openCourse('BSED')">BSED</button>
+    <button class="w3-bar-item w3-button w3-hover-black" onclick="openCourse('BSCRIM')">BSCRIM</button>
+    <button class="w3-bar-item w3-button w3-hover-black" onclick="openCourse('BSHM')">BSHM</button>
+    <button class="w3-bar-item w3-button w3-hover-black" onclick="openCourse('BSIT')">BSIT</button>
+  </div>
+
+  <!-- BSBA Content -->
+  <div id="BSBA" class="course">
+    <h2>BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION</h2>
+    <img src="B.A.webp" alt="logo" class="img-fluid rounded mx-auto d-block" style="max-width: 250px;">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card w3-animate-right">
+          <div class="card-body">
+            <h5 class="card-title">BACHELOR OF SCIENCE IN MARKETING MANAGEMENT</h5>
+            <p class="card-text">You wanna build your own empire, be an entrepreneur</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card w3-animate-left">
+          <div class="card-body">
+            <h5 class="card-title">BACHELOR OF SCIENCE IN FINANCIAL MANAGEMENT</h5>
+            <p class="card-text">Learn how to play with numbers, balancing would be the game.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BSED Content -->
+  <div id="BSED" class="course">
+    <h2>BACHELOR OF SCIENCE IN EDUCATION</h2>
+    <img src="B.E.webp" alt="logo" class="img-fluid rounded mx-auto d-block" style="max-width: 250px;">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card w3-animate-right">
+          <div class="card-body">
+            <h5 class="card-title">BACHELOR OF ELEMENTARY EDUCATION</h5>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card w3-animate-left">
+          <div class="card-body">
+            <h5 class="card-title">BACHELOR OF SECONDARY EDUCATION MAJOR IN ENGLISH</h5>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card w3-animate-left">
+          <div class="card-body">
+            <h5 class="card-title">BACHELOR OF SECONDARY EDUCATION MAJOR IN MATHEMATICS</h5>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BSCRIM Content -->
+  <div id="BSCRIM" class="course">
+    <h2>BACHELOR OF SCIENCE IN CRIMINOLOGY</h2>
+    <img src="BCRIM.webp" alt="logo" class="img-fluid rounded mx-auto d-block" style="max-width: 250px;">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card w3-animate-right">
+          <div class="card-body">
+            <h5 class="card-title">CRIMINOLOGY - LAW ENFORCEMENT</h5>
+            <p class="card-text">Study the justice system, law enforcement, and criminal behavior.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card w3-animate-left">
+          <div class="card-body">
+            <h5 class="card-title">CRIMINOLOGY - FORENSIC SCIENCE</h5>
+            <p class="card-text">Learn how to solve crimes through forensic investigation.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BSHM Content -->
+  <div id="BSHM" class="course">
+    <h2>BACHELOR OF SCIENCE IN HOSPITALITY MANAGEMENT</h2>
+    <img src="H.M.webp" alt="logo" class="img-fluid rounded mx-auto d-block" style="max-width: 250px;">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card w3-animate-right">
+          <div class="card-body">
+            <h5 class="card-title">HOSPITALITY MANAGEMENT - HOTEL MANAGEMENT</h5>
+            <p class="card-text">Manage operations in hotels, resorts, and other lodging establishments.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card w3-animate-left">
+          <div class="card-body">
+            <h5 class="card-title">HOSPITALITY MANAGEMENT - EVENT MANAGEMENT</h5>
+            <p class="card-text">Plan and manage events such as conferences, weddings, and corporate events.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BSIT Content -->
+  <div id="BSIT" class="course">
+    <h2>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</h2>
+    <img src="I.T.webp" alt="logo" class="img-fluid rounded mx-auto d-block" style="max-width: 250px;">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card w3-animate-right">
+          <div class="card-body">
+            <h5 class="card-title">INFORMATION TECHNOLOGY - SOFTWARE DEVELOPMENT</h5>
+            <p class="card-text">Develop software applications using the latest technologies and frameworks.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card w3-animate-left">
+          <div class="card-body">
+            <h5 class="card-title"> ASSOCIATE IN INFORMATION TECHNOLOGY</h5>
+            <p class="card-text">Specialize in network design, management, and security.</p>
+            <a href="/lesson3/enroll/enroll.html" class="btn btn-primary">ENROLL</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCourse(course) {
+      // Hide all courses
+      const courses = document.querySelectorAll('.course');
+      courses.forEach(course => {
+        course.classList.remove('active');
+      });
+
+      // Show the selected course with animation
+      const selectedCourse = document.getElementById(course);
+      selectedCourse.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>
